@@ -12,11 +12,7 @@ const URL = process.env.URL;
 const app = express();
 
 app.use(
-  cors({
-    origin: "http://localhost:3000", // Specify the allowed origin
-    methods: "GET,PUT,POST,DELETE",
-    allowedHeaders: "Content-Type,Authorization",
-  })
+  cors({origin: false, credentials: false})
 );
 
 app.use(express.urlencoded({ extended: false }));

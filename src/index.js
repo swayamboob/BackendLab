@@ -15,10 +15,10 @@ const app = express();
 //   cors({origin: true, credentials: true})
 // );
 app.use(cors({
-  origin: '*', // Allow all origins (for development)
-  methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-  credentials: true,
+  origin: "http://localhost:3000", // Replace with your frontend URL in production
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+  credentials:true,
 }));
 
 app.use(express.urlencoded({ extended: false }));

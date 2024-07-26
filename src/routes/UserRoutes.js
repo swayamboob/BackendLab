@@ -25,7 +25,9 @@ UserRoutes.post("/signup", async (req, res) => {
     res.status(500).json({ error: "Signup failed" });
   }
 });
-
+UserRoutes.get("/sam", (req,res)=>{
+  res.send("welcome you are working correctly");
+})
 UserRoutes.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
